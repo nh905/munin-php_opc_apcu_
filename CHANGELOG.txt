@@ -1,2 +1,15 @@
+2021-05-12 improved autoconf error message
+  php_opc_apcu_
+    - added $url to the error message if the plugin does not receive a valid response from the monitored server 
 
+2021-05-11 initial release
+  opc_apcu_info.php
+    - based on apc_info.php (https://github.com/vivid-planet/munin-php-apc/)
+    - changed APC calls to PHP OpCache
+    - separated out APCU logic since it is now independent of PHP OpCache
 
+  php_opc_apcu_
+    - based on php_apc_ (https://github.com/vivid-planet/munin-php-apc/)
+    - updated graph names and variables to be consistent with PHP OpCache
+    - moved the $custom_name to the front of the graph name so all graphs for one target are together
+    - replaced code that mapped input to output variables with a lookup table
