@@ -14,6 +14,7 @@ Although there are a number of PHP OpCache Munin plugins, they:
 # Requirements
 
 The `php_apc_` plugin has been tested on Munin v2.0.63
+
 The Munin homepage can be found at: http://munin-monitoring.org/
 
 
@@ -31,10 +32,10 @@ The Munin homepage can be found at: http://munin-monitoring.org/
 
 The complete project archive contains the following files:
 
-  php_opc_apcu    _   - the php_opc_apcu_ Munin plugin.
-  opc_apcu_info.php   - the PHP script that is called by the plugin.
-  CHANGELOG.txt       - a list of changes made to the project.
-  README.txt          - this file.
+    php_opc_apcu    _   - the php_opc_apcu_ Munin plugin.
+    opc_apcu_info.php   - the PHP script that is called by the plugin.
+    CHANGELOG.txt       - a list of changes made to the project.
+    README.txt          - this file.
 
 
 # Todo
