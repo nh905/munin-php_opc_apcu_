@@ -40,13 +40,14 @@ if ( defined $ARGV[0] and $ARGV[0] eq "autoconf" )
                    agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
 
 	my @badports;
+        my $url;  # define variable outside of 'foreach' so that $url can be used later 
 	foreach my $port (@PORTS) {
-		my $url = sprintf $URL, $port;
+		$url = sprintf $URL, $port;
 		my $response = $ua->request(HTTP::Request->new('GET',$url));
 		push @badports, $port unless $response->is_success and $response->content =~ /^mode: /im;
 	}
 	if (@badports) {
-		print "no (opc_apcu-status)\n";
+		print "no (opc_apcu-status) from $url\n";
 		exit 1;
 	} else {
 		print "yes\n";
